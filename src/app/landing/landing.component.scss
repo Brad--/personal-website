@@ -1,0 +1,51 @@
+.landing-container {
+    // dev stuff
+    padding-top: 75vh;
+    padding-bottom: 75vh;
+
+    min-height: 100vh;
+    min-width: 100vw;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    // play around with this number
+    perspective: 1px;
+}
+
+.pickaxe {
+    background-image: url('../../assets/pickaxe-small.jpeg');
+    background-repeat: no-repeat;
+    min-height: 100px;
+    min-width: 100px;
+}
+
+.landing-art {
+    display: flex;
+    position: relative;
+    height: 10%;
+    width: 20%;
+}
+
+.parallax {
+    position: absolute;
+    // This might be for the landing-art class, along with height and width
+    // position: relative;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.base {
+    transform: translateZ(0);
+}
+
+// scale = 1 + (translateZ * -1) / perspective
+.back {
+    transform: translateZ(-1px) scale(2);
+}
+
+.deep-back {
+    transform: translateZ(-50px) scale(51);
+}
